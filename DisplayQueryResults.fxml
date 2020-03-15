@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="books.DisplayQueryResultsController">
+   <bottom>
+      <GridPane hgap="8.0" maxWidth="1.7976931348623157E308" prefHeight="155.0" prefWidth="485.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </BorderPane.margin>
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="148.0" minWidth="95.0" prefWidth="125.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="240.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="NEVER" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyFilterButtonPressed" text="Apply Filter" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="filterTextField" GridPane.columnIndex="1" />
+            <Label text="Enter filter text:" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyFilterButtonPressed" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyFilterButtonPressed" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyFilterButtonPressed" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyFilterButtonPressed" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Simple Queries:" GridPane.rowIndex="1" />
+            <Label text="Query by Phone:" GridPane.rowIndex="3" />
+            <Label text="Rangle Queries:" GridPane.rowIndex="2" />
+            <Label text="Query by Lastname:" GridPane.rowIndex="4" />
+            <Label alignment="TOP_LEFT" text="Number of Orders and Income Per Day " GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="From" />
+                  <DatePicker prefHeight="27.0" prefWidth="89.0" />
+                  <Label text="to" />
+                  <DatePicker prefHeight="27.0" prefWidth="89.0" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <GridPane hgap="8.0" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="NEVER" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="queryTextArea" maxWidth="1.7976931348623157E308" prefRowCount="3" promptText="Enter query here the press Submit Query" wrapText="true" />
+          <Button mnemonicParsing="false" onAction="#submitQueryButtonPressed" text="Submit Query" GridPane.columnIndex="1" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+</BorderPane>
